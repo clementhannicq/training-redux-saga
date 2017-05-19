@@ -1,20 +1,21 @@
 $background: #5e2226$
 $class:inversion$
 
-## Direct Control
+## En inversé
 
 ```js
-directControl().next();
+function* inversed() {
+  yield alert;
+  yield alert;
+}
 ```
 
-## Inversion of control
-
 ```js
-const bob = inversed();
+const generator = inversed();
 let done = false
 
 while (!done) {
-  const yielded = bob.next();
+  const yielded = generator.next();
   yielded.value();
   done = yielded.done;
 }

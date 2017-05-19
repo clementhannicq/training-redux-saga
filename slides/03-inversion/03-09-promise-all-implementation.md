@@ -4,11 +4,14 @@ $class:inversion$
 ## Promise.all!
 
 ```js
-function* unnamedGenerator4557() {
-  const [name, sn] = yield [ call(getName), call(getSN) ];
-  yield call(console.log, `My name is ${name} ${sn}`);
+function* printRanking() {
+  const [name, ranking] =
+    yield [call(getNameFromApi), call(getRankingFromApi)];
+  yield call(console.log, `${name}: ${ranking}`);
 }
+```
 
+```js
 function run(generator, lastResult) {
   const { value, done } = generator.next();
   if (done) { return; }

@@ -1,14 +1,16 @@
 $background: #5e2226$
 $class:inversion$
 
-## What if getName was a asynchroneous?
+## Asynchrone
 
 ```js
-function* unnamedGenerator4557() {
-  const name = yield call(getName);
+function* asynchroneousGreeting() {
+  const name = yield call(getNameFromApi);
   yield call(console.log, `Hello my name is ${name}`);
 }
+```
 
+```js
 function run(generator, lastResult) {
   const { value: { fn, args }, done } = generator.next();
   if (done) { return; }
@@ -16,7 +18,7 @@ function run(generator, lastResult) {
     .then(result => run(generator, result));
 }
 
-run(unnamedGenerator4557())
+run(asynchroneousGreeting())
 ```
 
 note:

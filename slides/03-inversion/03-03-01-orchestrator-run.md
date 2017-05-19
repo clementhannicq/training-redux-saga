@@ -10,11 +10,6 @@ function* directControl() {
 }
 ```
 
-## En inversé
-
 ```js
-function* inversed() {
-  yield alert;
-  yield alert;
-}
+directControl().next();
 ```

@@ -1,7 +1,14 @@
 $class: generator-intro$
 $background: #314566$
 
-## How do I use it
+## Comment l'executer
+
+```js
+function* countToTwo() {
+  yield `one`;
+  yield `two`;
+}
+```
 
 ```js
 const generator = countToTwo();
@@ -12,6 +19,6 @@ const returnedOne = generator.next();
 const returnedTwo = generator.next();
 // { value: 'two', done: false }
 
-cont returnedThree = generator.next();
+const returnedThree = generator.next();
 // { value: undefined, done: true }
 ```

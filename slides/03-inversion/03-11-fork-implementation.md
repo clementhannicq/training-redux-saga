@@ -1,15 +1,16 @@
 $background: #5e2226$
 $class:inversion$
 
-## I want this!
+## Je veux ça
 
 ```js
 const call = (fn, ...args) => ({ fn, args, type: 'CALL' });
 const fork = (?) => ({ ?, type: 'FORK' });
 
-function* fileExtractor() {
-  yield fork(getThenPrintFile, 'bauer');
-  yield fork(getThenPrintFile, 'chloe');
+function* sendMails(users) {
+  for (user in users) {
+    yield fork(generateAndSendMails, user)
+  }
 }
 ```
 

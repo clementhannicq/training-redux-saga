@@ -1,17 +1,16 @@
 $class: generator-intro$
 $background: #314566$
 
-## More complex
+## Avec des parametres
 
 ```js
-function* bugSong(initialBugAmount) {
-  let bugAmount = initialBugAmount;
+function* counter(initialCount) {
+  let counter = initialCount;
 
   while (true) {
-    const fixABug = yield `${bugAmount} bugs in my code`;
-    if (fixABug) {
-      bugAmount = 2*bugAmount + 8;
-    }
+    const shouldIncrement =
+      yield `Current value: ${counter}, increment?`;
+    if (shouldIncrement) { initialCount ++ }
   }
 }
 ```

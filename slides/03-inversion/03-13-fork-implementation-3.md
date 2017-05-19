@@ -1,7 +1,7 @@
 $background: #5e2226$
 $class:inversion$
 
-## And on the run side
+## Pour executer ça
 
 ```js
 function run(generator, lastResult) {

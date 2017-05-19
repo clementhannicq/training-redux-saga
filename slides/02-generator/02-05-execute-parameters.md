@@ -1,22 +1,31 @@
 $class: generator-intro$
 $background: #314566$
 
-## Let's sing a song
+## Execution
 
 ```js
-const awesomeSong = bugSong(2);
+function* counter(initialCount) {
+  let counter = initialCount;
 
-awesomeSong.next().value;
-// 2 bugs in my code
+  while (true) {
+    const shouldIncrement =
+      yield `Current value: ${counter}, increment?`;
+    if (shouldIncrement) { initialCount ++ }
+  }
+}
+```
 
-awesomeSong.next(true).value;
-// 12 bugs in my code
+```js
+const count = counter(2);
 
-awesomeSong.next(true).value;
-// 32 bugs in my code
+count.next().value;
+// Current value: 2, increment?
 
-awesomeSong.next(false).value;
-// 32 bugs in my code
+count.next(true).value;
+// Current value: 3, increment?
+
+count.next(false).value;
+// Current value: 3, increment?
 ```
 
 note:

@@ -1,15 +1,17 @@
 $background: #5e2226$
 $class:inversion$
 
-## How do I get return values?
+## Retours de fonctions
 
 ```js
-function* unnamedGenerator4556() {
+function* greeting() {
   const name = yield getName;
   yield () => console.log `Hello my name is ${name}`;
 }
+```
 
-const generator = unnamedGenerator4556();
+```js
+const generator = greeting();
 let done, value = false;
 
 while (!done) {

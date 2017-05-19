@@ -1,7 +1,7 @@
 $background: #3a045b$
 $class: inversion$
 
-## On the RUN side
+## Du côté du middleware
 
 ```js
 export default generator => store => next => action => {

@@ -3,7 +3,7 @@ $class: inversion$
 
 # Redux
 
-## Is also an event channel
+## Nouvel helper: TAKE, pour prendre des actions
 
 ```js
 export default generator => store => next => action => {
@@ -11,7 +11,7 @@ export default generator => store => next => action => {
 
   function run(instance, lastResult) {
     // ...
-    if (value.type === 'TAKE' && isNotEventChannel(value.ec)) {
+    if (value.type === 'TAKE') {
       if (action.type === value.ec) {
         run(instance, action)
       }

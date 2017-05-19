@@ -5,6 +5,6 @@ $background: #314566$
 
 ## Support: ECMA2015
 
- - Chrome: OK since 39
- - IE/Edge: OK since Edge 13
- - Safari: Nope
+ - Chrome: OK depuis 39
+ - IE/Edge: OK depuis Edge 13
+ - Safari: ~OK depuis 10

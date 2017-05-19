@@ -1,7 +1,7 @@
 $background: #3a045b$
 $class: inversion$
 
-## Can do thunk with clean actions
+## Déclancher un appel api en fonction d'events
 
 ```js
 function* apiUsers {

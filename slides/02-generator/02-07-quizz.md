@@ -1,7 +1,7 @@
 $class: generator-intro$
 $background: #314566$
 
-## Broken code
+## C'est tout cassé !
 
 ```js
   function* brokenGenerator(names) {
